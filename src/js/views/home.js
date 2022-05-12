@@ -37,10 +37,14 @@ export const Home = () => {
           {store.planetas?.map((obj, i) => {
             return(
             <PlanetCard 
+            i={i}
             key={obj.name} 
             name={obj.name} 
             climate={obj.climate} 
             terrain ={obj.terrain}
+            diameter= {obj.diameter}
+            gravity = {obj.gravity}
+            surface_water = {obj.surface_water}
             />
             );
           })}

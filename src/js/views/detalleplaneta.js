@@ -3,9 +3,9 @@ import React, { useContext } from "react";
 import { useParams } from "react-router-dom"; // este hook captura el parametro de Ruta
 import { Context } from "../store/appContext";
 
-export const DetallePj = (props) => {
+export const DetallePlaneta = (props) => {
   const { store } = useContext(Context);
-  const parametroRuta = useParams(); //para acceder a lo que pasamos por ruta en este caso el Indice
+  const parametroRuta = useParams();
 
   return (
     <div className="container">
@@ -23,7 +23,7 @@ export const DetallePj = (props) => {
           <div className="col-5 float-end mt-3">
             {" "}
             <h4 className="card-title">
-              {store.personajes[parametroRuta.indice].name}
+              {store.planetas[parametroRuta.indice].name}
             </h4>
             <p>
               Lorem Ipsum es simplemente el texto de relleno de las imprentas y
@@ -47,21 +47,22 @@ export const DetallePj = (props) => {
               <thead>
                 <tr>
                   <th scope="col">Name </th>
-                  <th scope="col">Gender</th>
-                  <th scope="col">Height</th>
-                  <th scope="col">Mass</th>
-                  <th scope="col">Skin color</th>
-                  <th scope="col">Hair color</th>
+                  <th scope="col">Climate</th>
+                  <th scope="col">Terrain</th>
+                  <th scope="col">Diameter</th>
+                  <th scope="col">Gravity</th>
+                  <th scope="col">Surface water</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>{store.personajes[parametroRuta.indice].name}</td>
-                  <td>{store.personajes[parametroRuta.indice].gender}</td>
-                  <td>{store.personajes[parametroRuta.indice].height}</td>
-                  <td>{store.personajes[parametroRuta.indice].mass}</td>
-                  <td>{store.personajes[parametroRuta.indice].skin_color}</td>
-                  <td>{store.personajes[parametroRuta.indice].hair_color}</td>
+
+                  <td>{store.planetas[parametroRuta.indice].name}</td>
+                  <td>{store.planetas[parametroRuta.indice].climate}</td>
+                  <td>{store.planetas[parametroRuta.indice].terrain}</td>
+                  <td>{store.planetas[parametroRuta.indice].diameter}</td>
+                  <td>{store.planetas[parametroRuta.indice].gravity}</td>
+                  <td>{store.planetas[parametroRuta.indice].surface_water}</td>
                 </tr>
               </tbody>
             </table>
