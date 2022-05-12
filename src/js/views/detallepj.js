@@ -69,10 +69,6 @@ export const DetallePj = (props) => {
 </table>
           </div>
         </div>
-
-        <div className="card-footer w-100 text-muted">
-          Footer stating cats are CUTE little animals
-        </div>
       </div>
     </div>
   );
