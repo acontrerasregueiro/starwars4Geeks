@@ -3,9 +3,10 @@ import "../../styles/home.css";
 import { Context } from "../store/appContext";
 import { Card } from "../component/card";
 import { PlanetCard } from "../component/planetCard";
+
+
 export const Home = () => {
-  const [tarea, setTarea] = useState("");
-	const [lista, setLista] = useState([]);  
+  
   const { store, action } = useContext(Context);
 
   
@@ -17,10 +18,14 @@ export const Home = () => {
           {store.personajes?.map((obj, i) => {
             return (
               <Card
+                i={i}
                 key={obj.name}
                 name={obj.name}
                 gender={obj.gender}
                 mass={obj.mass}
+                height = {obj.height}
+                skin_color = {obj.hair_color}
+                skin_face = {obj.skin_face}
               />
             );
           })}

@@ -1,4 +1,9 @@
 const getState = ({ getStore, getActions, setStore }) => {
+	/*
+	getStore Para acceder a los elementos de store
+	getActions Para acceder a actions
+	setStore para modificar los elementos de Store	
+	*/
 	return {
 		store: {
 			personajes: [],
